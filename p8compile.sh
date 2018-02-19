@@ -127,6 +127,10 @@ fi
 cp fullcode.txt $binfilename
 rm fullcode.txt
 
+GREEN='\033[1;32m'
+NC='\033[0m' # No Color
+printf "\n\n${GREEN}P8COMPILE : DONE !${NC}\n\n"
+
 if [ "$start" == "start" ]; then
 	$PICO_BIN -run $binfilename -windowed 1 -root_path . &> /dev/null &
 fi
